@@ -7,6 +7,9 @@ This project showcases my ability to Query a database and retrieve data records 
 SELECT * FROM FilmLocations;
 #Retrieve all records with all columns from the “FilmLocations” table.
 
+SELECT COUNT(*) FROM FilmLocations;
+#Retrieve the number of rows from the “FilmLocations” table.
+
 SELECT Title, Director, Writer FROM FilmLocations;
 #Retrieve the names of all films with director names and writer names.
 
@@ -15,3 +18,21 @@ SELECT Title, ReleaseYear, Locations FROM FilmLocations WHERE ReleaseYear>=2001;
 
 SELECT Title, ProductionCompany, Locations, ReleaseYear FROM FilmLocations WHERE Writer<>"James Cameron";
 #Retrieve the names, production company names, filming locations, and release years of the films which are not written by James Cameron.
+
+SELECT COUNT(Locations) FROM FilmLocations WHERE Writer='James Cameron';
+#Retrieve the number of locations of the films which are written by James Cameron.
+
+SELECT Count(*) FROM FilmLocations WHERE ReleaseYear<1950;
+#Retrieve the number of rows having a release year older than 1950 from the “FilmLocations” table.
+
+SELECT DISTINCT Title FROM FilmLocations;
+#Remove Duplicates from Title
+
+SELECT DISTINCT Title FROM FilmLocations WHERE ProductionCompany='Warner Bros. Pictures';
+#Retrieve the number of release years of the films distinctly, produced by Warner Bros. Pictures.
+
+SELECT COUNT(DISTINCT Distributor) FROM FilmLocations WHERE Actor1="Clint Eastwood";
+#Retrieve the number of distributors distinctly who distributed films acted by Clint Eastwood as 1st actor.
+
+SELECT * FROM FilmLocations LIMIT 15 OFFSET 10;
+#Retrieve the first 15 rows from the “FilmLocations” table starting from row 11.
