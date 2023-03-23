@@ -1,0 +1,17 @@
+This project showcases my ability to Query a database and retrieve data records from one or more tables of a database as resultset according to specified criteria
+
+#The database used in this Project comes from the following dataset source: Film Locations in San Francisco 
+#URL: https://data.sfgov.org/Culture-and-Recreation/Film-Locations-in-San-Francisco/yitu-d5am?utm_medium=Exinfluencer&utm_source=Exinfluencer&utm_content=000026UJ&utm_term=10006555&utm_id=NA-SkillsNetwork-Channel-SkillsNetworkCoursesIBMDeveloperSkillsNetworkDB0201ENSkillsNetwork22-2022-01-01
+
+
+SELECT * FROM FilmLocations;
+#Retrieve all records with all columns from the “FilmLocations” table.
+
+SELECT Title, Director, Writer FROM FilmLocations;
+#Retrieve the names of all films with director names and writer names.
+
+SELECT Title, ReleaseYear, Locations FROM FilmLocations WHERE ReleaseYear>=2001;
+#Retrieve the names of all films released in the 21st century and onwards (release years after 2001 including 2001), along with filming locations and release years
+
+SELECT Title, ProductionCompany, Locations, ReleaseYear FROM FilmLocations WHERE Writer<>"James Cameron";
+#Retrieve the names, production company names, filming locations, and release years of the films which are not written by James Cameron.
